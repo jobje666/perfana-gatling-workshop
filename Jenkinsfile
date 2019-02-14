@@ -19,7 +19,7 @@ node("master") {
 
     // Run the test
     //sh "${mvnHome}/bin/mvn clean install perfana-gatling:test -Ptest-env-acc,test-type-load,assert-results -DtestRunId=$testRunId -DbuildResultsUrl=$buildUrl"
-    sh "mvn clean install perfana-gatling:test -Ptest-env-acc,test-type-load,assert-results -DtestRunId=$testRunId -DbuildResultsUrl=$buildUrl"
+    mvn clean install perfana-gatling:test -Ptest-env-acc,test-type-load,assert-results -DtestRunId=$testRunId -DbuildResultsUrl=$buildUrl
 
 
 
