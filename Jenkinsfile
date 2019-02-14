@@ -12,13 +12,13 @@ node("jos-m3-openjdk8") {
     // Get the maven tool.
     // ** NOTE: This 'M3' maven tool must be configured
     // **       in the global configuration.
-    def mvnHome = tool 'M3'
+    //def mvnHome = tool 'M3'
 
 
     stage 'Execute load test'
 
     // Run the test
-    sh "${mvnHome}/bin/mvn clean install perfana-gatling:test -Ptest-env-acc,test-type-load,assert-results -DtestRunId=$testRunId -DbuildResultsUrl=$buildUrl"
+    sh "mvn clean install perfana-gatling:test -Ptest-env-acc,test-type-load,assert-results -DtestRunId=$testRunId -DbuildResultsUrl=$buildUrl"
 
 
 
